@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>1</y>
+      <width>941</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <item>
+        <property name="text">
+         <string>张三</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jason</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>teddy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>windy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>nancy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>李四</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Johnny</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Johnson</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>stan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>王五</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rebacca</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>赵六</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>coddy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Buddy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>丁老大</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cloudy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sarah</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bryan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jack</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>John</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="lineWidth">
+              <number>-1</number>
+             </property>
+             <property name="text">
+              <string>Winner Number is:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_Num"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="text">
+              <string>Lottery Winner</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_winner">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Roll_Up">
+         <property name="text">
+          <string>Roll Up!</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>950</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

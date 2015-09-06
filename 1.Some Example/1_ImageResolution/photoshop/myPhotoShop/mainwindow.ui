@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1608</width>
+    <height>1005</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QScrollArea" name="oldScrollArea">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>721</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>719</width>
+       <height>649</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="picture1">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>250</y>
+        <width>1</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="newScrollArea">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>40</y>
+      <width>691</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>689</width>
+       <height>649</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="picture2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>250</y>
+        <width>1</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>720</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>直方图</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>处理图像</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>10</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>处理后图像</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="makeDone">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>10</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>转为处理图像</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>710</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>阈值</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="theThreshold">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>550</y>
+      <width>54</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1608</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="newPicture"/>
+    <addaction name="openPicture"/>
+    <addaction name="action_openPicture2"/>
+    <addaction name="actionTest"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>进行二值化</string>
+     </property>
+     <widget class="QMenu" name="menuAutomatic">
+      <property name="title">
+       <string>automatic</string>
+      </property>
+      <addaction name="actionOtsu"/>
+      <addaction name="actionEntropy"/>
+     </widget>
+     <addaction name="actionManual"/>
+     <addaction name="menuAutomatic"/>
+    </widget>
+    <addaction name="drawHistogram"/>
+    <addaction name="menu_4"/>
+    <addaction name="reSize"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>滤镜</string>
+    </property>
+    <widget class="QMenu" name="menuRoberts_operator">
+     <property name="title">
+      <string>Roberts operator</string>
+     </property>
+     <addaction name="Roberts_x"/>
+     <addaction name="Roberts_y"/>
+     <addaction name="Roberts_RGB_x"/>
+     <addaction name="Roberts_RGB_y"/>
+    </widget>
+    <widget class="QMenu" name="menuPrewitt_operator">
+     <property name="title">
+      <string>Prewitt operator</string>
+     </property>
+     <addaction name="prewitt_x"/>
+     <addaction name="prewitt_y"/>
+     <addaction name="prewitt_RGB_x"/>
+     <addaction name="prewitt_RGB_y"/>
+    </widget>
+    <widget class="QMenu" name="menuSobel_operator">
+     <property name="title">
+      <string>Sobel operator</string>
+     </property>
+     <addaction name="sobel_x"/>
+     <addaction name="sobel_y"/>
+     <addaction name="sobel_RGB_x"/>
+     <addaction name="sobel_RGB_y"/>
+    </widget>
+    <addaction name="menuRoberts_operator"/>
+    <addaction name="menuPrewitt_operator"/>
+    <addaction name="menuSobel_operator"/>
+    <addaction name="actionGaussian_filter"/>
+    <addaction name="actionMean_filter"/>
+    <addaction name="actionMedian_filter"/>
+    <addaction name="matrixBySelf"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>像素操作</string>
+    </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>代数操作</string>
+     </property>
+     <addaction name="action_add"/>
+     <addaction name="action_minus"/>
+     <addaction name="action_multiply"/>
+    </widget>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>旋转</string>
+     </property>
+     <addaction name="clockwise"/>
+     <addaction name="anticlockwise"/>
+    </widget>
+    <addaction name="action_vertex"/>
+    <addaction name="menu_6"/>
+    <addaction name="menu_7"/>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>形态操作</string>
+    </property>
+    <widget class="QMenu" name="menu_9">
+     <property name="title">
+      <string>膨胀</string>
+     </property>
+     <addaction name="grayDilation"/>
+     <addaction name="binaryDilation"/>
+    </widget>
+    <widget class="QMenu" name="menu_10">
+     <property name="title">
+      <string>腐蚀</string>
+     </property>
+     <addaction name="grayErosion"/>
+     <addaction name="binaryErosion"/>
+    </widget>
+    <widget class="QMenu" name="menu_12">
+     <property name="title">
+      <string>闭操作</string>
+     </property>
+     <addaction name="grayClose"/>
+     <addaction name="binaryClose"/>
+    </widget>
+    <widget class="QMenu" name="menu_11">
+     <property name="title">
+      <string>开操作</string>
+     </property>
+     <addaction name="grayOpen"/>
+     <addaction name="binaryOpen"/>
+    </widget>
+    <addaction name="menu_9"/>
+    <addaction name="menu_10"/>
+    <addaction name="menu_11"/>
+    <addaction name="menu_12"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_8"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="newPicture">
+   <property name="text">
+    <string>新建图片</string>
+   </property>
+  </action>
+  <action name="openPicture">
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </action>
+  <action name="drawHistogram">
+   <property name="text">
+    <string>生成灰度直方图</string>
+   </property>
+  </action>
+  <action name="reSize">
+   <property name="text">
+    <string>改变图片大小</string>
+   </property>
+  </action>
+  <action name="actionGaussian_filter">
+   <property name="text">
+    <string>Gaussian filter</string>
+   </property>
+  </action>
+  <action name="actionMean_filter">
+   <property name="text">
+    <string>mean filter</string>
+   </property>
+  </action>
+  <action name="actionMedian_filter">
+   <property name="text">
+    <string>Median filter</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="text">
+    <string>manual</string>
+   </property>
+  </action>
+  <action name="actionOtsu">
+   <property name="text">
+    <string>Otsu</string>
+   </property>
+  </action>
+  <action name="actionEntropy">
+   <property name="text">
+    <string>Entropy</string>
+   </property>
+  </action>
+  <action name="matrixBySelf">
+   <property name="text">
+    <string>手动输入卷积矩阵</string>
+   </property>
+  </action>
+  <action name="action_vertex">
+   <property name="text">
+    <string>点操作</string>
+   </property>
+  </action>
+  <action name="action_add">
+   <property name="text">
+    <string>代数加</string>
+   </property>
+  </action>
+  <action name="action_minus">
+   <property name="text">
+    <string>代数减</string>
+   </property>
+  </action>
+  <action name="action_multiply">
+   <property name="text">
+    <string>代数乘</string>
+   </property>
+  </action>
+  <action name="action_openPicture2">
+   <property name="text">
+    <string>打开代数操作图片</string>
+   </property>
+  </action>
+  <action name="Roberts_x">
+   <property name="text">
+    <string>灰度横向</string>
+   </property>
+  </action>
+  <action name="Roberts_y">
+   <property name="text">
+    <string>灰度纵向</string>
+   </property>
+  </action>
+  <action name="prewitt_x">
+   <property name="text">
+    <string>灰度横向</string>
+   </property>
+  </action>
+  <action name="prewitt_y">
+   <property name="text">
+    <string>灰度纵向</string>
+   </property>
+  </action>
+  <action name="sobel_x">
+   <property name="text">
+    <string>灰度横向</string>
+   </property>
+  </action>
+  <action name="sobel_y">
+   <property name="text">
+    <string>灰度纵向</string>
+   </property>
+  </action>
+  <action name="Roberts_RGB_x">
+   <property name="text">
+    <string>RGB横向</string>
+   </property>
+  </action>
+  <action name="Roberts_RGB_y">
+   <property name="text">
+    <string>RGB纵向</string>
+   </property>
+  </action>
+  <action name="prewitt_RGB_x">
+   <property name="text">
+    <string>RGB横向</string>
+   </property>
+  </action>
+  <action name="prewitt_RGB_y">
+   <property name="text">
+    <string>RGB纵向</string>
+   </property>
+  </action>
+  <action name="sobel_RGB_x">
+   <property name="text">
+    <string>RGB横向</string>
+   </property>
+  </action>
+  <action name="sobel_RGB_y">
+   <property name="text">
+    <string>RGB纵向</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>test</string>
+   </property>
+  </action>
+  <action name="clockwise">
+   <property name="text">
+    <string>顺势针90度</string>
+   </property>
+  </action>
+  <action name="anticlockwise">
+   <property name="text">
+    <string>逆时针90度</string>
+   </property>
+  </action>
+  <action name="grayDilation">
+   <property name="text">
+    <string>灰度</string>
+   </property>
+  </action>
+  <action name="binaryDilation">
+   <property name="text">
+    <string>二值</string>
+   </property>
+  </action>
+  <action name="grayErosion">
+   <property name="text">
+    <string>灰度</string>
+   </property>
+  </action>
+  <action name="binaryErosion">
+   <property name="text">
+    <string>二值</string>
+   </property>
+  </action>
+  <action name="grayOpen">
+   <property name="text">
+    <string>灰度</string>
+   </property>
+  </action>
+  <action name="binaryOpen">
+   <property name="text">
+    <string>二值</string>
+   </property>
+  </action>
+  <action name="grayClose">
+   <property name="text">
+    <string>灰度</string>
+   </property>
+  </action>
+  <action name="binaryClose">
+   <property name="text">
+    <string>二值</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
