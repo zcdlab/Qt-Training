@@ -9,12 +9,10 @@ add_subdirectory(2dpainting)
 add_subdirectory(contextinfo)
 add_subdirectory(cube)
 
-# add_subdirectory(hellogl2)
+add_subdirectory(hellogl2)
 
 add_subdirectory(hellowindow)
-
 add_subdirectory(legacy)
-
 add_subdirectory(paintedwindow)
 
 add_subdirectory(qopenglwidget)

@@ -13,7 +13,7 @@ set(srcs
     ${moc_srcs}
     glwidget.cpp
     logo.cpp
-    mainwindow.h
+    mainwindow.cpp
     window.cpp
     main.cpp
 )
