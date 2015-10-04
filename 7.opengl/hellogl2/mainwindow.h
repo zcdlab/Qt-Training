@@ -50,7 +50,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow();
 
-private slots:
+  private slots:
     void onAddNew();
 };
 
