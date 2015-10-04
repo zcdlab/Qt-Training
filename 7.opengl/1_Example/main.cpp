@@ -1,16 +1,23 @@
 #include "mainwindow.h"
 #include <QApplication>
+
+#ifdef WIN32
+
 #include <windows.h>
 #include <GL/glut.h>
 
+#else
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+#include <GLUT/glut.h>
 
-    glutInit(&argc,argv);
+#endif
 
-    return a.exec();
+int main(int argc, char *argv[]) {
+  QApplication a(argc, argv);
+  MainWindow w;
+  w.show();
+
+  glutInit(&argc, argv);
+
+  return a.exec();
 }
